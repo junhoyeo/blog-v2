@@ -8,8 +8,8 @@ const Container = styled.div`
   height: 386px;
   background: linear-gradient(to right, #ffd43b, #fcc419, #fab005, #f59f00, #f59f00);
 
-  @media (max-width: 795px) {
-    height: 486px;
+  @media (max-width: 600px) {
+    height: fit-content;
   }
 `;
 
@@ -18,26 +18,44 @@ const Wrapper = styled.div`
   padding: 2rem 1rem;
   max-width: 960px;
   flex-grow: 1;
-  background-image: url(/header-illust.png);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+`;
 
-  @media (max-width: 845px) {
-    background-position-x: calc(100% + 50px);
+const Image = styled.img`
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  object-fit: contain;
+  height: 100%;
+
+  @media (max-width: 896px) {
+    height: 25rem;
+    top: unset;
   }
 
-  /* @media (max-width: 795px) {
-    background-position-y: -30px;
+  @media (max-width: 822px) {
+    height: 23rem;
+    top: unset;
   }
 
-  @media (max-width: 770px) {
-    background-position-y: -80px;
-  } */
+  @media (max-width: 780px) {
+    height: 20rem;
+    top: 0;
+    bottom: unset;
+  }
 
-  @media (max-width: 795px) {
-    background-size: contain;
-    background-position: center;
+  @media (max-width: 694px) {
+    height: 20rem;
+    top: -20px;
+    bottom: unset;
+  }
+
+  @media (max-width: 600px) {
+    position: unset;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: unset;
   }
 `;
 
@@ -66,8 +84,14 @@ const Title = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
 
-  @media (max-width: 845px) {
+  @media (max-width: 896px) {
     font-size: 36px;
+  }
+
+  @media (max-width: 600px) {
+    position: unset;
+    margin: 0;
+    margin-top: -30px;
   }
 `;
 
@@ -77,6 +101,7 @@ const Header = () => (
       <IndexLink to="/">
         <Brand>JUNHOYEO.GITHUB.IO</Brand>
       </IndexLink>
+      <Image src={'/header-illust.png'} />
       <Title>
         트렌디한<br />
         개발자를 꿈꾸는<br />
