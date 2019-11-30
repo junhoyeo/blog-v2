@@ -1,11 +1,16 @@
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap&subset=korean');
 
 * {
   user-select: none;
   box-sizing: border-box;
-  font-family: 'Spoqa Han Sans', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 body {
   margin: 0;
+}
+
+a {
+  color: #4c6ef5;
+  text-decoration: none;
 }

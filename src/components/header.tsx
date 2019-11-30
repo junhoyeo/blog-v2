@@ -1,46 +1,40 @@
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
-interface IHeaderProps {
-  siteTitle: string;
-}
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
-const Header = ({ siteTitle }: IHeaderProps) => (
-  <header
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const Wrapper = styled.div`
+  padding: 1.5rem 1rem;
+  max-width: 960px;
+  flex-grow: 1;
+`;
+
+const IndexLink = styled(props => <Link {...props} />)`
+  color: #343a40;
+`;
+
+const Title = styled.span`
+  background-color: #000;
+  font-size: 1.2rem;
+  padding: 0.3rem 1rem;
+  padding-left: calc(1rem + 5px);
+  letter-spacing: 5px;
+  font-weight: 500;
+  color: white;
+`;
+
+const Header = () => (
+  <Container>
+    <Wrapper>
+      <IndexLink to="/">
+        <Title>주노 개발 블로그</Title>
+      </IndexLink>
+    </Wrapper>
+  </Container>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: '',
-};
 
 export default Header;
