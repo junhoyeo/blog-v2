@@ -10,7 +10,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Header from './header';
-import './layout.css';
+
+import '../global.scss';
 
 interface ILayoutProps {
   children: React.ReactChild | React.ReactChild[];
