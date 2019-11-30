@@ -20,18 +20,19 @@ const IndexLink = styled(props => <Link {...props} />)`
 const Title = styled.span`
   background-color: #000;
   font-size: 1.2rem;
-  padding: 0.3rem 1rem;
+  padding: 0.5rem 1rem;
   padding-left: calc(1rem + 5px);
   letter-spacing: 5px;
   font-weight: 500;
   color: white;
+  font-family: 'VT323', monospace;
 `;
 
 const Header = () => (
   <Container>
     <Wrapper>
       <IndexLink to="/">
-        <Title>주노 개발 블로그</Title>
+        <Title>JUNHOYEO.GITHUB.IO</Title>
       </IndexLink>
     </Wrapper>
   </Container>
