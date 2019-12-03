@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@types/react-helmet": "^5.0.14",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.19.1",
     "tslint": "^5.20.1",
     "tslint-config-airbnb": "^5.11.2",
@@ -36,6 +37,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "yarn run develop",
