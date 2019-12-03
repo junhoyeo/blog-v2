@@ -9,7 +9,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Header from './Header';
+import Header from './header';
 
 import '../global.scss';
 
