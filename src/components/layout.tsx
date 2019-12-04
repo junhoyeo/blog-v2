@@ -1,57 +1,30 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
-import { graphql, useStaticQuery } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
+import styled from 'styled-components';
 
-import Header from './header';
+import Sidemenu from './Sidemenu';
 
 import '../global.scss';
+
+const Container = styled.div`
+  display: flex;
+  height: 100%;
+`;
+
+const Content = styled.main`
+  flex: 1 1;
+`;
 
 interface ILayoutProps {
   children: React.ReactChild | React.ReactChild[];
 }
 
-const Layout = ({ children }: ILayoutProps) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  return (
-    <>
-      <Header />
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {' '}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const Layout = ({ children }: ILayoutProps) => (
+  <Container>
+    <Sidemenu />
+    <Content>
+      {children}
+    </Content>
+  </Container>
+);
 
 export default Layout;

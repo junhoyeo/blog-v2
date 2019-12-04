@@ -1,13 +1,37 @@
-@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
-
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap&subset=korean');
-
 * {
   user-select: none;
   box-sizing: border-box;
-  font-family: 'Spoqa Han Sans', sans-serif;
+  font-family: 'Lato', 'Noto Sans KR', sans-serif;
+}
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
 }
 
 body {
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+button,
+input {
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
