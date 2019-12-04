@@ -8,10 +8,11 @@ import Icon from '../../static/icons/search.svg';
 import Avatar from '../../static/illusts/avatar.png';
 import Balloon from '../../static/illusts/balloon.png';
 
-const Container = styled.div`
+const Container = styled.aside`
   flex-shrink: 0;
   width: 20rem;
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 0 1.2rem;
