@@ -31,6 +31,6 @@ const Button = ({ onClick, children }: IButtonProps) => {
       {children}
     </Container>
   );
-}
+};
 
 export default Button;

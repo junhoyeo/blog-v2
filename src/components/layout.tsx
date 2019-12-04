@@ -15,7 +15,7 @@ const Content = styled.main`
 `;
 
 interface ILayoutProps {
-  children: React.ReactChild | React.ReactChild[];
+  children: React.ReactElement | React.ReactElement[];
 }
 
 const Layout = ({ children }: ILayoutProps) => (

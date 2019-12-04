@@ -24,6 +24,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -47,5 +48,11 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-generate-typings`,
+      options: {
+        dest: `./src/types/graphql-types.d.ts`,
+      },
+    },
   ],
 }

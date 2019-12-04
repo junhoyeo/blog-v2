@@ -14,5 +14,10 @@
       "shorthand-first"
     ],
     "variable-name": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "src/types"
+    ]
   }
 }

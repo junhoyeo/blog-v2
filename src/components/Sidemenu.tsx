@@ -2,6 +2,9 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
+import Icon from '../../static/icons/search.svg';
+import Avatar from '../../static/illusts/avatar.png';
+
 const Container = styled.div`
   flex-shrink: 0;
   width: 20rem;
@@ -11,6 +14,8 @@ const Container = styled.div`
   padding: 0 1.2rem;
   padding-top: 3rem;
   background: radial-gradient(circle, #100E48, #0A0930);
+  background-image: radial-gradient(circle, #a1c4fd 0%, #c2e9fb 100%);
+  position: relative;
 `;
 
 const Content = styled.div`
@@ -19,21 +24,26 @@ const Content = styled.div`
   flex-direction: column;
 `;
 
+const Illust = styled.img`
+  position: absolute;
+  width: 158px;
+  bottom: 0;
+  left: 30px;
+`;
+
 const Title = styled(Link)`
   color: white;
   font-size: 1.5rem;
   font-weight: 700;
   margin-left: auto;
-  color: #54b7ff;
+  color: #222750;
 `;
-
-const Icon = require('../../static/icons/search.svg');
 
 const Input = styled.input`
   padding: 0.6rem 0.8rem;
   background-color: transparent;
-  border: 5px solid #54b7ff;
-  color: #54b7ff;
+  border: 5px solid #222750;
+  color: #222750;
   font-size: 0.8rem;
   margin-top: 0.3rem;
   background-image: url(${Icon});
@@ -46,6 +56,7 @@ export default () => {
   return (
     <Container>
       <Content>
+        <Illust src={Avatar} />
         <Title to="/">
           주노 개발 블로그
         </Title>
