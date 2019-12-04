@@ -29,6 +29,7 @@ const Illust = styled.img`
   width: 158px;
   bottom: 0;
   left: 30px;
+  filter: brightness(1.1);
 `;
 
 const Title = styled(Link)`

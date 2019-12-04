@@ -6,12 +6,12 @@ export type Scalars = {
   Boolean: boolean,
   Int: number,
   Float: number,
-  /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
-  JSON: any,
   /** A date string, such as 2007-12-03, compliant with the ISO 8601 standard for
    * representation of dates and times using the Gregorian calendar.
  */
   Date: any,
+  /** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
+  JSON: any,
 };
 
 
@@ -697,7 +697,6 @@ export type FileFieldsEnum =
   'childMarkdownRemark___id' |
   'childMarkdownRemark___frontmatter___title' |
   'childMarkdownRemark___frontmatter___date' |
-  'childMarkdownRemark___frontmatter___layout' |
   'childMarkdownRemark___excerpt' |
   'childMarkdownRemark___rawMarkdownBody' |
   'childMarkdownRemark___fileAbsolutePath' |
@@ -1455,7 +1454,6 @@ export type MarkdownRemarkFieldsEnum =
   'id' |
   'frontmatter___title' |
   'frontmatter___date' |
-  'frontmatter___layout' |
   'excerpt' |
   'rawMarkdownBody' |
   'fileAbsolutePath' |
@@ -1576,14 +1574,20 @@ export type MarkdownRemarkFilterInput = {
 
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>,
-  date?: Maybe<Scalars['String']>,
-  layout?: Maybe<Scalars['String']>,
+  date?: Maybe<Scalars['Date']>,
+};
+
+
+export type MarkdownRemarkFrontmatterDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
 };
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>,
-  date?: Maybe<StringQueryOperatorInput>,
-  layout?: Maybe<StringQueryOperatorInput>,
+  date?: Maybe<DateQueryOperatorInput>,
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -1834,8 +1838,6 @@ export type QuerySiteArgs = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>
@@ -1904,8 +1906,6 @@ export type Site = Node & {
   children: Array<Node>,
   internal: Internal,
   siteMetadata?: Maybe<SiteSiteMetadata>,
-  port?: Maybe<Scalars['Int']>,
-  host?: Maybe<Scalars['String']>,
   pathPrefix?: Maybe<Scalars['String']>,
   polyfill?: Maybe<Scalars['Boolean']>,
   buildTime?: Maybe<Scalars['Date']>,
@@ -2038,8 +2038,6 @@ export type SiteFieldsEnum =
   'siteMetadata___description' |
   'siteMetadata___keywords' |
   'siteMetadata___siteUrl' |
-  'port' |
-  'host' |
   'pathPrefix' |
   'polyfill' |
   'buildTime';
@@ -2050,8 +2048,6 @@ export type SiteFilterInput = {
   children?: Maybe<NodeFilterListInput>,
   internal?: Maybe<InternalFilterInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   buildTime?: Maybe<DateQueryOperatorInput>,
