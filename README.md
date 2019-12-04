@@ -1,4 +1,6 @@
-# 👋 junhoyeo.github.io [![Typed with TypeScript](https://badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=555555&color=blue)](https://github.com/microsoft/TypeScript) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Code Style](https://badgen.net/badge/style/Airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript) [![Website](https://img.shields.io/website/https/junhoyeo.github.io?down_color=red&down_message=dead&style=flat&up_color=brightgreen&up_message=ok)](https://junhoyeo.github.io)
+# 👋 junhoyeo.github.io
+[![Typed with TypeScript](https://badgen.net/badge/icon/Typed?icon=typescript&label&labelColor=555555&color=blue)](https://github.com/microsoft/TypeScript) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![Code Style](https://badgen.net/badge/style/Airbnb/ff5a5f?icon=airbnb)](https://github.com/airbnb/javascript) [![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components) [![Website](https://img.shields.io/website/https/junhoyeo.github.io?down_color=red&down_message=dead&style=flat&up_color=brightgreen&up_message=ok)](https://junhoyeo.github.io)
+
 Gatsby와 TypeScript로 만든 새로운 개인 개발 블로그입니다.
 
 ## 🚙 Visit
