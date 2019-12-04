@@ -2,6 +2,8 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
+import useConstant from '../utils/useConstant';
+
 import Icon from '../../static/icons/search.svg';
 import Avatar from '../../static/illusts/avatar.png';
 import Balloon from '../../static/illusts/balloon.png';
@@ -23,22 +25,51 @@ const Content = styled.div`
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 `;
 
-const AvatarIllust = styled.img`
-  position: absolute;
-  width: 158px;
-  bottom: 0;
-  left: 45px;
-  filter: brightness(1.1);
-`;
+const Illusts = () => {
+  const IllustWrapper = useConstant(() => styled.div`
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    filter: brightness(1.13);
+  `);
 
-const BalloonIllust = styled.img`
-  position: absolute;
-  width: 96px;
-  bottom: 0;
-  right: 45px;
-`;
+  const IllustContainer = useConstant(() => styled.div`
+    position: relative;
+    height: 100%;
+    width: 100%;
+  `);
+
+  const AvatarIllust = useConstant(() => styled.img`
+    position: absolute;
+    width: 158px;
+    bottom: 0;
+    left: 45px;
+  `);
+
+  const BalloonIllust = useConstant(() => styled.img`
+    position: absolute;
+    width: 96px;
+    bottom: 0;
+    right: 45px;
+  `);
+
+  return (
+    <IllustWrapper>
+      <IllustContainer>
+        <AvatarIllust src={Avatar} />
+        <BalloonIllust src={Balloon} />
+      </IllustContainer>
+    </IllustWrapper>
+  );
+};
 
 const Title = styled(Link)`
   color: white;
@@ -64,9 +95,8 @@ const Input = styled.input`
 export default () => {
   return (
     <Container>
+      <Illusts />
       <Content>
-        <AvatarIllust src={Avatar} />
-        <BalloonIllust src={Balloon} />
         <Title to="/">
           주노 개발 블로그
         </Title>
