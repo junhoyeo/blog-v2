@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "jsx": "preserve",
     "lib": [
       "dom",
@@ -10,16 +10,17 @@
     ],
     "module": "commonjs",
     "noEmit": true,
+    "noImplicitAny": false,
     "noUnusedLocals": false,
     "strict": true,
     "target": "esnext"
   },
-  "include": [
-    "src/types",
-  ],
   "exclude": [
     "node_modules",
     "public",
     ".cache"
+  ],
+  "include": [
+    "src/types"
   ]
 }

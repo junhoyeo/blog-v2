@@ -1,7 +1,7 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+require('ts-node').register();
 
-// You can delete this file if you're not using it
+import { createPages } from './lib/createPages';
+import { onCreateNode } from './lib/onCreateNode';
+
+exports.createPages = createPages;
+exports.onCreateNode = onCreateNode;

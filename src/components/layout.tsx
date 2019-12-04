@@ -12,6 +12,7 @@ const Container = styled.div`
 
 const Content = styled.main`
   flex: 1 1;
+  padding: 1rem;
 `;
 
 interface ILayoutProps {

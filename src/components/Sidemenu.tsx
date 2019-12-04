@@ -77,6 +77,10 @@ const Title = styled(Link)`
   font-weight: 700;
   margin-left: auto;
   color: #222750;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Input = styled.input`

@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import { Node, Query } from '../types/graphql-types';
+import { INode } from '../types/graphql-extends';
+import { Query } from '../types/graphql-types';
 
 import Layout from '../components/Layout';
+import Post, { IPost } from '../components/Post';
 import SEO from '../components/SEO';
 
 const LatestPostListQuery = graphql`
@@ -12,10 +14,13 @@ const LatestPostListQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
-          excerpt(truncate: true, pruneLength: 200)
+          fields {
+            slug
+          }
           frontmatter {
             title
-            date(formatString: "YYYY-MM-DD HH:mm:ss")
+            date(formatString: "YYYY년 MM월 DD일")
+            excerpt
           }
           id
         }
@@ -33,16 +38,15 @@ export default () => {
     <Layout>
       <SEO title="Home" />
       <Container>
-        {data.allMarkdownRemark.edges.map(({ node }: { node: any }) => (
-          <li key={node.id}>
-            <h2>
-              <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
-            </h2>
-            <h3>{node.frontmatter.date}</h3>
-            <p>{node.excerpt}</p>
-            <hr />
-          </li>
-        ))}
+        {data.allMarkdownRemark.edges.map(({ node }: { node: INode }) => {
+          const post: IPost = {
+            date: node.frontmatter.date,
+            excerpt: node.frontmatter.excerpt,
+            path: node.fields.slug,
+            title: node.frontmatter.title,
+          };
+          return <Post key={node.id} post={post} />;
+        })}
       </Container>
     </Layout>
   );
