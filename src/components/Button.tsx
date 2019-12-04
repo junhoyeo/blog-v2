@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 interface IButtonProps {
   onClick: () => void;
-  children: React.ReactChild;
+  children: React.ReactElement | React.ReactElement[];
 }
 
 const Button = ({ onClick, children }: IButtonProps) => {

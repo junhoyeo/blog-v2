@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
+import ArrowButton from '../components/ArrowButton';
 import useConstant from '../utils/useConstant';
 
 import Icon from '../../static/icons/search.svg';
@@ -97,6 +98,11 @@ const Input = styled.input`
   padding-left: 2.2rem;
 `;
 
+const onClickResume = () => {
+  const win = window.open('https://junhoyeo.github.io/resume', '_blank');
+  win.focus();
+};
+
 export default () => {
   return (
     <Container>
@@ -106,6 +112,9 @@ export default () => {
           주노 개발 블로그
         </Title>
         <Input />
+        <ArrowButton onClick={onClickResume}>
+          포트폴리오 확인하기
+        </ArrowButton>
       </Content>
     </Container>
   );
