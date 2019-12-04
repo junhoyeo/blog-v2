@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Icon from '../../static/icons/search.svg';
 import Avatar from '../../static/illusts/avatar.png';
+import Balloon from '../../static/illusts/balloon.png';
 
 const Container = styled.div`
   flex-shrink: 0;
@@ -24,12 +25,19 @@ const Content = styled.div`
   flex-direction: column;
 `;
 
-const Illust = styled.img`
+const AvatarIllust = styled.img`
   position: absolute;
   width: 158px;
   bottom: 0;
-  left: 30px;
+  left: 45px;
   filter: brightness(1.1);
+`;
+
+const BalloonIllust = styled.img`
+  position: absolute;
+  width: 96px;
+  bottom: 0;
+  right: 45px;
 `;
 
 const Title = styled(Link)`
@@ -57,7 +65,8 @@ export default () => {
   return (
     <Container>
       <Content>
-        <Illust src={Avatar} />
+        <AvatarIllust src={Avatar} />
+        <BalloonIllust src={Balloon} />
         <Title to="/">
           주노 개발 블로그
         </Title>
