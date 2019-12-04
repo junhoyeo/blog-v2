@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 
-const PostTemplate: React.FC = React.memo(props => {
+const PostTemplate: React.FC = React.memo((props) => {
   return (
     <Layout>
       <code>

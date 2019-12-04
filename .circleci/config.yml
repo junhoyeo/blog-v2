@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    branches:
+      ignore:
+        - gh-pages
+    docker:
+      - image: circleci/node:12
+    working_directory: ~/repo
+    environment:
+      - SOURCE_BRANCH: source
+      - TARGET_BRANCH: master
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run:
+          name: Install dependencies
+          command: |
+            npm install
+            sudo npm install --unsafe-perm=true -g gh-pages
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - deploy:
+          name: Deploy
+          command: |
+            git config user.email "ci-build@klukas.net"
+            git config user.name "ci-build"
+            npm run deploy-circleci

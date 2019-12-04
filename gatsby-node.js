@@ -1,7 +1,7 @@
 require('ts-node').register();
 
-import { createPages } from './lib/createPages';
-import { onCreateNode } from './lib/onCreateNode';
+const { createPages } = require('./lib/createPages');
+const { onCreateNode } = require('./lib/onCreateNode');
 
 exports.createPages = createPages;
 exports.onCreateNode = onCreateNode;
