@@ -32,6 +32,8 @@ const LatestPostListQuery = graphql`
 
 const Container = styled.div`
   padding: 1rem;
+  display: flex;
+  flex-flow: wrap;
 `;
 
 export default () => {
