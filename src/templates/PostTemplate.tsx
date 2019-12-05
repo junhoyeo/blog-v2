@@ -42,6 +42,14 @@ const Cover = ({ children, src }: ICoverProps) => {
     position: absolute;
     margin: 1rem 3.5rem;
     bottom: 0;
+
+    @media (max-width: 1000px) {
+      margin: 1rem 3rem;
+    }
+
+    @media (max-width: 500px) {
+      margin: 1.5rem;
+    }
   `;
 
   return (
@@ -56,11 +64,23 @@ const Cover = ({ children, src }: ICoverProps) => {
 const Post = styled.div`
   padding: 2rem 3.5rem;
   padding-top: 1.5rem;
+
+  @media (max-width: 1000px) {
+    padding: 2rem 3rem;
+  }
+
+  @media (max-width: 500px) {
+    padding: 1.5rem;
+  }
 `;
 
 const PostDate = styled.span`
   font-size: 1.5rem;
   color: #f1f3f5;
+
+  @media (max-width: 500px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const PostTitle = styled.h1`
@@ -72,6 +92,12 @@ const PostTitle = styled.h1`
   word-break: break-word;
   line-height: 1.3;
   color: white;
+  word-break: keep-all;
+
+  @media (max-width: 500px) {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const PostArticle = styled.div`

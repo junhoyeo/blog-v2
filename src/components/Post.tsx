@@ -17,6 +17,11 @@ export interface IPostProps {
 const Wrapper = styled.div`
   width: 50%;
   padding: 0.5rem;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 0;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -43,6 +48,10 @@ const CoverImage = styled.img`
   width: 100%;
   height: 18rem;
   object-fit: cover;
+
+  @media (max-width: 1000px) {
+    height: 15rem;
+  }
 `;
 
 const Meta = styled.div`
