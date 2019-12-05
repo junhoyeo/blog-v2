@@ -12,7 +12,6 @@ const Container = styled.div`
 
 const PostContent = styled.main`
   flex: 1 1;
-  padding: 1rem;
 `;
 
 interface ILayoutProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { INode } from '../types/graphql-extends';
 import { Query } from '../types/graphql-types';
 
@@ -21,6 +21,7 @@ const LatestPostListQuery = graphql`
             title
             date(formatString: "YYYY년 MM월 DD일")
             excerpt
+            cover
           }
           id
         }
@@ -29,7 +30,9 @@ const LatestPostListQuery = graphql`
   }
 `;
 
-const Container = styled.div``;
+const Container = styled.div`
+  padding: 1rem;
+`;
 
 export default () => {
   const data = useStaticQuery<Query>(LatestPostListQuery);
@@ -42,6 +45,7 @@ export default () => {
           const post: IPost = {
             date: node.frontmatter.date,
             excerpt: node.frontmatter.excerpt,
+            image: node.frontmatter.cover,
             path: node.fields.slug,
             title: node.frontmatter.title,
           };

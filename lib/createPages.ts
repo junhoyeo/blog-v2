@@ -14,7 +14,8 @@ export const createPages = async ({ graphql, actions, reporter }: CreatePagesArg
             }
             frontmatter {
               title
-              date
+              date(formatString: "YYYY년 MM월 DD일")
+              cover
             }
           }
         }
@@ -27,10 +28,12 @@ export const createPages = async ({ graphql, actions, reporter }: CreatePagesArg
   }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const { html, frontmatter: { title }, fields: { slug } } = node;
+    const { html, frontmatter: { cover, date, title }, fields: { slug } } = node;
     createPage({
       component: require.resolve('../src/templates/PostTemplate.tsx'),
       context: {
+        cover,
+        date,
         html,
         title,
       },

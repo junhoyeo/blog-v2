@@ -7,6 +7,7 @@ export interface IPost {
   date: string;
   title: string;
   excerpt: string;
+  image: string;
 }
 
 export interface IPostProps {
@@ -23,9 +24,8 @@ const StyledLink = styled(Link)`
 `;
 
 const Container = styled.div`
-  padding: 1.2rem;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
 
   &:hover,
   &:focus {
@@ -35,6 +35,19 @@ const Container = styled.div`
       text-decoration: underline;
     }
   }
+`;
+
+const CoverImage = styled.img`
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+`;
+
+const Meta = styled.div`
+  padding: 1.2rem;
+  padding-top: 0.5rem;
 `;
 
 const Title = styled.h1`
@@ -53,14 +66,17 @@ const Excerpt = styled.p`
 `;
 
 const Post = ({ post }: IPostProps) => {
-  const { path, date, title, excerpt }: IPost = post;
+  const { image, path, date, title, excerpt }: IPost = post;
   return (
     <Wrapper>
       <StyledLink to={path}>
         <Container>
-          <Date>{date}</Date>
-          <Title>{title}</Title>
-          <Excerpt>{excerpt}</Excerpt>
+          <CoverImage src={image} />
+          <Meta>
+            <Date>{date}</Date>
+            <Title>{title}</Title>
+            <Excerpt>{excerpt}</Excerpt>
+          </Meta>
         </Container>
       </StyledLink>
     </Wrapper>

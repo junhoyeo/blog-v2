@@ -6,6 +6,7 @@ export interface INode extends Node {
     title: string;
     date: string;
     excerpt: string;
+    cover: string;
   };
   fields: {
     slug: string;
