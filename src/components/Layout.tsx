@@ -8,6 +8,10 @@ import '../global.scss';
 const Container = styled.div`
   display: flex;
   height: 100%;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const PostContent = styled.main`

@@ -21,6 +21,14 @@ const Container = styled.aside`
   background: radial-gradient(circle, #100E48, #0A0930);
   background-image: radial-gradient(circle, #a1c4fd 0%, #c2e9fb 100%);
   position: relative;
+
+  @media (max-width: 1000px) {
+    width: 100vw;
+    height: fit-content;
+    min-height: unset;
+    padding-top: 0;
+    padding: 0.5rem 1rem;
+  }
 `;
 
 const Content = styled.div`
@@ -28,6 +36,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1;
+
+  @media (max-width: 1000px) {
+    margin: 0;
+  }
 `;
 
 const Illusts = () => {
@@ -41,6 +53,10 @@ const Illusts = () => {
     bottom: 0;
     z-index: 0;
     filter: brightness(1.13);
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   `);
 
   const IllustContainer = useConstant(() => styled.div`
@@ -83,6 +99,19 @@ const Title = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 1000px) {
+    margin-left: unset;
+  }
+`;
+
+const SearchWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 const Input = styled.input`
@@ -111,10 +140,12 @@ export default () => {
         <Title to="/">
           주노 개발 블로그
         </Title>
-        <Input />
-        <ArrowButton onClick={onClickResume}>
-          포트폴리오 확인하기
-        </ArrowButton>
+        <SearchWrap>
+          <Input />
+          <ArrowButton onClick={onClickResume}>
+            포트폴리오 확인하기
+          </ArrowButton>
+        </SearchWrap>
       </Content>
     </Container>
   );

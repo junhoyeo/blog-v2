@@ -18,6 +18,10 @@ const UtterancesContainer = styled.div`
     border-top: 1px solid #ced4da;
     max-width: 80%;
     margin-bottom: 2rem;
+
+    @media (max-width: 1000px) {
+      max-width: 90%;
+    }
   }
 `;
 
