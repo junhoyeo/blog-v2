@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
+import Utterances from '../components/Utterances';
 
 interface IPostTemplateProps {
   pageContext: {
@@ -127,6 +128,7 @@ const PostTemplate: React.FC<IPostTemplateProps> = React.memo(({ pageContext }) 
       <Post>
         <PostArticle dangerouslySetInnerHTML={{ __html: html }} />
       </Post>
+      <Utterances />
     </Layout>
   );
 });
