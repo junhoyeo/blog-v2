@@ -10,7 +10,7 @@ const Container = styled.div`
   height: 100%;
 `;
 
-const Content = styled.main`
+const PostContent = styled.main`
   flex: 1 1;
   padding: 1rem;
 `;
@@ -22,9 +22,9 @@ interface ILayoutProps {
 const Layout = ({ children }: ILayoutProps) => (
   <Container>
     <Sidemenu />
-    <Content>
+    <PostContent>
       {children}
-    </Content>
+    </PostContent>
   </Container>
 );
 

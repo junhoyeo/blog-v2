@@ -9,16 +9,18 @@ excerpt: 시험기간에 친구들이 Jekyll을 이용해서 블로그를 만드
 # 그걸로 뭐 하게요?
 일단 블로그를 만드는 과정에서 많은 것을 배울 수 있을 것 같았습니다. 블로그가 필요하기도 했고요.
 
-![티스토리 로고](/blog/assets/images/posts/20190804/tistory.png)
+<img alt="티스토리 로고" src="/images/20190804/tistory.png" style="width:70%;">
+
 > 바로 그 티스토리
 
 중학교 2학년 때 말부터 [티스토리](https://www.tistory.com/)로 잠깐 블로그를 했던 적이 있었는데, 기능이나 디자인도 썩 마음에 들지 않았습니다. 무엇보다 마크다운을 사용할 수 없어서 불편했습니다. 그렇다고 웹 텍스트 에디터가 그보다 편하게 설계된 것도 아니였습니다. 다른 컨텐츠를 붙여 넣으면 서식까지 딸려와 게시글 스타일의 일관성이 없어지기도 했고, 게시글을 편집하고 관리하기도 불편했습니다. 그 대안으로 잠깐 joostory 님께서 개발하신 [tistory-editor](https://github.com/joostory/tistory-editor)를 사용하기도 했습니다.<br>
 추가: 이번 3월, 새로운 티스토리 에디터에 드디어 [마크다운 모드](https://notice.tistory.com/2478)가 생겼다고 합니다! <s>와! 그래도 전 제 블로그가 더 좋아요.</s>
 
-![TWIL 블로그](/blog/assets/images/posts/20190804/twils.png)
+<img alt="TWIL 블로그" src="/images/20190804/twils.png" style="width:80%;">
+
 > 일기장이 된 TWIL 블로그
 
-사실 이 블로그를 만들기 전에, 친구에게 소개를 받아 [TWIL](https://github.com/junhoyeo/my-twils)이라는 프로젝트를 진행한 적이 있었습니다. 
+사실 이 블로그를 만들기 전에, 친구에게 소개를 받아 [TWIL](https://github.com/junhoyeo/my-twils)이라는 프로젝트를 진행한 적이 있었습니다.
 Today I Learned를 뜻하는 TIL이 뭔지는 다들 아시죠? 오늘 하루 동안 배운 것을 깃허브 레포에 정리해 올리는 거예요. 그런데 하루 하루 살기도 바쁜 디미고에서 매일 정리하기는 어려우니까, 일주일치를 간단히 리스트 형식으로 몰아서 올리는 겁니다. **This Week I Learned**라는 뜻이죠! 커밋도 하고, 다른 사람들과 공유도 할 수 있고!<br>
 ... 아 물론 이건 그 친구 이야기고, 제가 하니까 코딩하는 시간도 늘고, TWIL 쓰는 시간도 길어졌더라고요! 와! ~~공부!~~
 
@@ -51,7 +53,7 @@ Today I Learned를 뜻하는 TIL이 뭔지는 다들 아시죠? 오늘 하루 �
 또한, `gh-pages` 브랜치나 `docs` 폴더를 이용해 레포지토리별 문서나 랜딩 페이지 등을 호스팅할 수도 있으니 참고하세요!
 
 ## Jekyll
-Jekyll은 간단하고 확장성이 좋은 정적 사이트 생성기입니다. 
+Jekyll은 간단하고 확장성이 좋은 정적 사이트 생성기입니다.
 
 GitHub Pages가 Jekyll을 기본으로 지원하기 때문에 마크다운으로 작성한 글을 올리는 것만으로 쉽게 자신의 페이지를 가질 수 있습니다.
 
@@ -65,14 +67,16 @@ Ruby 기반이고, [Liquid](https://shopify.github.io/liquid/)라는 템플릿 �
 
 ## JQuery
 
-<img alt="jQuery 밈" src="/blog/assets/images/posts/20190804/jquery.png" style="width:60% !important;">
+<img alt="jQuery 밈" src="/images/20190804/jquery.png" style="width:60%;">
+
 > 이제는 놓아줄 때가 된 제이쿼리
 
 최대한 피하고 순수하게 자바스크립트로만 코딩하려고 노력했는데, 프로젝트 검색이나 anime.js 연동에는 어쩔 수 없이 조금 사용했습니다. 😰
 
 ## Google Analytics
 
-![구글 애널리틱스](/blog/assets/images/posts/20190804/analytics.png)
+<img alt="구글 애널리틱스" src="/images/20190804/analytics.png" style="width:80%;">
+
 > *Set up Google Analytics*
 
 사실 자세히는 안 봤지만, 블로그의 방문자 수나 자주 방문하는 페이지 등등 심심할 때 살펴보면 재미있어요! 아직은 블로그에 올린 글이 없었지만 나중에 다시 보면 달라져 있겠죠?

@@ -24,7 +24,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-images`,
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -32,6 +39,13 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/content/images`,
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
