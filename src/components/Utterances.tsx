@@ -14,7 +14,7 @@ const utterancesConfig = {
 const UtterancesContainer = styled.div`
   div.utterances {
     margin-top: 0.5rem;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     border-top: 1px solid #ced4da;
     max-width: 80%;
     margin-bottom: 2rem;

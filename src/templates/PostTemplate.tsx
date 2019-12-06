@@ -2,12 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
+import SEO from '../components/SEO';
 import Utterances from '../components/Utterances';
 
 interface IPostTemplateProps {
   pageContext: {
     cover: string;
     date: string;
+    excerpt: string;
     html: string;
     title: string;
   };
@@ -143,10 +145,11 @@ const PostArticle = styled.div`
 `;
 
 const PostTemplate: React.FC<IPostTemplateProps> = React.memo(({ pageContext }) => {
-  const { cover, date, html, title } = pageContext;
+  const { cover, date, excerpt, html, title } = pageContext;
 
   return (
     <Layout>
+      <SEO title={title} description={excerpt} />
       <Cover src={cover}>
         <PostDate>{date}</PostDate>
         <PostTitle>{title}</PostTitle>
