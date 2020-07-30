@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Sidemenu from './Sidemenu';
-
 import '../global.scss';
 
 const Container = styled.div`
@@ -24,7 +22,6 @@ interface ILayoutProps {
 
 const Layout = ({ children }: ILayoutProps) => (
   <Container>
-    <Sidemenu />
     <PostContent>
       {children}
     </PostContent>
