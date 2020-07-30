@@ -16,11 +16,9 @@ export interface IPostProps {
 
 const Wrapper = styled.div`
   width: 50%;
-  padding: 0.5rem;
 
   @media (max-width: 1000px) {
     width: 100%;
-    padding: 0;
   }
 `;
 
@@ -56,7 +54,6 @@ const CoverImage = styled.img`
 
 const Meta = styled.div`
   padding: 1.2rem;
-  padding-top: 0.5rem;
 `;
 
 const Title = styled.h1`
