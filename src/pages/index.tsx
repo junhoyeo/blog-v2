@@ -8,6 +8,7 @@ import ExperienceItem from '../components/ExperienceItem';
 import ProjectItem from '../components/ProjectItem';
 
 import LatestPostListQuery from '../queries/LatestPostListQuery';
+import products from '../data/products.json';
 
 const experienceList = [
   {
@@ -50,28 +51,12 @@ export default () => {
           Projects
         </SectionTitle>
         <ProjectList>
-          <ProjectItem
-            image="https://trendy-resume.now.sh/static/products/motorgraph.png"
-            title="모터그래프 커뮤니티 게시판 제작"
-            parts={[
-              "FRONTEND",
-              "SSR"
-            ]}
-            category="웹 서비스"
-            place="아웃소싱"
-            date="2020.05 ~ 2020.07"
-          />
-          <ProjectItem
-            image="https://trendy-resume.now.sh/static/products/motorgraph.png"
-            title="모터그래프 커뮤니티 게시판 제작"
-            parts={[
-              "FRONTEND",
-              "SSR"
-            ]}
-            category="웹 서비스"
-            place="아웃소싱"
-            date="2020.05 ~ 2020.07"
-          />
+          {products.map((product, index) => (
+            <ProjectItem
+              {...product}
+              key={`product-${index}`}
+            />
+          ))}
         </ProjectList>
       </SectionContainer>
     </Layout>

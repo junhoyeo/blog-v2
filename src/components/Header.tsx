@@ -18,6 +18,10 @@ const Header = () => {
             Creating INEVITABLE™ Frontend
             <DescriptionPoint />
           </Description>
+          <Notice>
+            <span>📌</span>
+            This resume is currently WIP. Please refer <a href="https://trendy-resume.now.sh">here</a>
+          </Notice>
         </Information>
       </LeftProfileWrapper>
       <RightProfileWrapper>
@@ -30,7 +34,8 @@ export default Header;
 
 const Container = styled.div`
   padding-top: 45px;
-  margin-bottom: 35px;
+  /* margin-bottom: 35px; */
+  margin-bottom: 65px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -68,6 +73,7 @@ const Information = styled.div`
   margin-left: 30px;
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 const Title = styled.span`
@@ -94,4 +100,21 @@ const DescriptionPoint = styled.span`
 `;
 
 const RightProfileWrapper = styled.div`
+`;
+
+const Notice = styled.div`
+  font-weight: bold;
+  background-color: #d0ebff;
+  border: 2px solid rgba(116, 143, 252, 0.8);
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: -50px;
+  width: 400px;
+  box-shadow: 0px 8px 25px rgba(184, 186, 217, 0.45);
+
+  span {
+    margin-right: 10px;
+  }
 `;

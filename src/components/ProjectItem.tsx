@@ -44,7 +44,9 @@ const ProjectItem: React.FC<IProjectItem> = ({
         <Category>{category}</Category>
         <Title>{title}</Title>
         <MetaList>
-          <MetaText>{place}</MetaText>
+          <MetaText>
+            {place}
+          </MetaText>
           <MetaText>{date}</MetaText>
         </MetaList>
       </Information>
@@ -112,7 +114,7 @@ const MetaList = styled.div`
 `;
 
 const MetaText = styled.span`
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   background-color: #e9ecef;
   width: fit-content;
