@@ -30,7 +30,7 @@ export default Header;
 
 const Container = styled.div`
   padding-top: 45px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,9 +46,9 @@ const ProfileImageWrapper = styled.div`
   width: 128px;
   height: 128px;
   border-radius: 50%;
-  background: linear-gradient(to bottom right, #0560A7, #12A2F6);
-  box-shadow: 12px 12px 24px #2b2f33,
-    -12px -12px 24px #3b4147;
+  background: linear-gradient(to bottom right, #5795ED, #316FE1);
+  box-shadow: 12px 12px 24px rgba(29, 72, 235, 0.15),
+    -12px -12px 24px rgba(206, 216, 245, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,12 +73,12 @@ const Information = styled.div`
 const Title = styled.span`
   font-weight: 900;
   font-size: 2.2rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(33, 37, 41, 0.95);
 `;
 
 const Description = styled.span`
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(33, 37, 41, 0.5);
   margin-top: 10px;
   font-size: 16px;
 `;
@@ -86,7 +86,7 @@ const Description = styled.span`
 const DescriptionPoint = styled.span`
   height: 9px;
   width: 9px;
-  background-color: #159FE8;
+  background-color: #316FE1;
   display: inline-block;
   border-radius: 50%;
   margin-left: 8px;

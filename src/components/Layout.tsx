@@ -23,7 +23,8 @@ const Wrapper = styled.div`
   min-height: 100vh;
   width: 100%;
   justify-content: center;
-  background-color: #33383D;
+  /* background-color: #33383D; */
+  background-color: #F7F7F7;
 `;
 
 const Container = styled.main`

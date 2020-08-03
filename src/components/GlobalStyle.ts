@@ -14,6 +14,9 @@ const GlobalStyles = createGlobalStyle`
       Segoe UI, Apple SD Gothic Neo, Roboto, Helvetica Neue, Arial, sans-serif,
       Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     letter-spacing: -0.3px;
+  }
+
+  img {
     user-select: none;
     -webkit-user-drag: none;
   }
