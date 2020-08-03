@@ -1,4 +1,4 @@
-[
+export default [
   {
     "image": "/products/motorgraph.png",
     "title": "모터그래프 커뮤니티 게시판 제작",

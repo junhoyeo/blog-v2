@@ -8,7 +8,7 @@ import ExperienceItem from '../components/ExperienceItem';
 import ProjectItem from '../components/ProjectItem';
 
 import LatestPostListQuery from '../queries/LatestPostListQuery';
-import products from '../data/products.json';
+import products from '../data/products';
 
 const experienceList = [
   {
