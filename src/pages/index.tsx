@@ -1,15 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useStaticQuery } from 'gatsby';
-import { INode } from '../types/graphql-extends';
-import { Query } from '../types/graphql-types';
-
 import Layout from '../components/Layout';
 import Header from '../components/Header';
-import Post, { IPost } from '../components/Post';
 import SEO from '../components/SEO';
 import ExperienceItem from '../components/ExperienceItem';
+import ProjectItem from '../components/ProjectItem';
 
 import LatestPostListQuery from '../queries/LatestPostListQuery';
 
@@ -53,24 +49,37 @@ export default () => {
         <SectionTitle>
           Projects
         </SectionTitle>
+        <ProjectList>
+          <ProjectItem
+            image="https://trendy-resume.now.sh/static/products/motorgraph.png"
+            title="모터그래프 커뮤니티 게시판 제작"
+            parts={[
+              "FRONTEND",
+              "SSR"
+            ]}
+            category="웹 서비스"
+            place="아웃소싱"
+            date="2020.05 ~ 2020.07"
+          />
+          <ProjectItem
+            image="https://trendy-resume.now.sh/static/products/motorgraph.png"
+            title="모터그래프 커뮤니티 게시판 제작"
+            parts={[
+              "FRONTEND",
+              "SSR"
+            ]}
+            category="웹 서비스"
+            place="아웃소싱"
+            date="2020.05 ~ 2020.07"
+          />
+        </ProjectList>
       </SectionContainer>
-      {/* <PostList>
-        {data.allMarkdownRemark.edges.map(({ node }: { node: INode }) => {
-          const post: IPost = {
-            date: node.frontmatter.date,
-            excerpt: node.frontmatter.excerpt,
-            image: node.frontmatter.cover,
-            path: node.fields.slug,
-            title: node.frontmatter.title,
-          };
-          return <Post key={node.id} post={post} />;
-        })}
-      </PostList> */}
     </Layout>
   );
 };
 
 const SectionContainer = styled.div`
+  margin-bottom: 20px;
 `;
 
 const SectionTitle = styled.h2`
@@ -100,7 +109,11 @@ const ExperienceList = styled.div`
   margin: 15px 0;
 `;
 
-const PostList = styled.div`
-  display: flex;
-  flex-flow: wrap;
+const ProjectList = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(284.406px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  margin-top: 15px;
 `;
